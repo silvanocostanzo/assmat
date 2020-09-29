@@ -1,0 +1,16 @@
+{{if .Success}}
+<h1>le montant à payer s'élève à {{ .Total }}€ :</h1>
+{{else}}
+<h1>Contact</h1>
+<form method="POST">
+  <label>heures:</label><br />
+  <input type="number" name="hours" min="0" step="0.01" /><br />
+  <label>net par heur:</label><br />
+  <input type="number" name="net" min="0" step="0.01" /><br />
+  <label>indemnité journalière:</label><br />
+  <input type="number" name="allocation" min="0" step="0.01" /><br />
+  <label>jours:</label><br />
+  <input type="number" name="days" min="0" step="0.01" /><br />
+  <input type="submit" />
+</form>
+{{end}}
